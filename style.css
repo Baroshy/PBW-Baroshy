@@ -13,7 +13,7 @@ h1{
 
 form{
   width: 350px;
-  border: 10px solid rgb(109, 30, 255);
+  border: 10px solid #6d1eff;
   border-radius: 1em;
   background-color:steelblue;
   font-family: 'Times New Roman';
@@ -24,7 +24,7 @@ form{
 input{
   width: 150px;
   box-sizing: border-box;
-  border: 1px solid rgb(1, 217, 255);
+  border: 1px solid #01d9ff;
 }
 label{
   width: 150px;
