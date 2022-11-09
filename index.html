@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 100%;
+          background-image: url('https://storage.googleapis.com/wzukusers/user-34708702/images/5c812cb73d006oVrNbDE/stars.gif');
+        }
+        nav{
+            position: relative;
+            font-family: monospace;
+            float: left;
+            width: 100%;
+        }
+        ul{
+           list-style: none;
+           padding-left:0; 
+        }
+        li{
+            background-color: rgb(35, 198, 219);
+            display: block;
+            float: left;
+            padding: 1rem;
+            position: relative;
+            text-decoration: none;
+            transition-duration: 0.5s;
+        }
+        li a{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        li ul{
+            background-color: rgb(35, 198, 219);
+            visibility: hidden;
+            opacity: 0;
+            min-width: 5rem;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+            box-shadow: 0px 8px 16px 0px rgb(27, 50, 250);
+        }
+        li ul li{
+            clear: both;
+            width: 100%;
+        }
+        ul li:hover,ul li:focus-within{
+            background-color: rgb(103, 103, 168);
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        a:hover{
+            color: blueviolet;
+        }
+        ul li:hover>ul,
+        ul li:focus-within>ul,
+        ul li ul:hover,
+        ul li ul:focus{
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <article>
+    <h1>Pagina inicial.</h1>
+    <p>Selecione no Menu acima uma opção.</p>
+    </article>
+    <nav>
+        <ul>
+            <li><a href="curriculo.png">Curriculo</a></li>
+            <li><a href="#">Sobre mim</a>
+                <ul>
+                    <a href="pagina_eu.html">Meus Projetos e Hobbies</a>
+                    <a href="facebook.com">Facebook</a>
+                    <a href="instagram.com">Instagram</a>
+                </ul></li>
+                
+                <li><a href="#">Estou estudando</a>
+                    <ul>
+                        <a href="POO.html">POO</a>
+                        <a href="PBW.html">PBW</a>
+                        <a href="ICO.html">ICO</a>
+                    </ul></li>
+                
+            <li><a href="contato.html">Entre em Contato</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
