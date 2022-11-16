@@ -13,67 +13,83 @@
             margin: 0;
             padding: 0;
         }
-                body {
-                
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 100%;
-          background-image: url('https://storage.googleapis.com/wzukusers/user-34708702/images/5c812cb73d006oVrNbDE/stars.gif');
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-image: url('https://storage.googleapis.com/wzukusers/user-34708702/images/5c812cb73d006oVrNbDE/stars.gif');
         }
-        nav{
+        p{
+            line-height: 1.1em;
+        }
+        p+p{
+            text-align: 1.5em;
+            margin-top: 1.5em;
+        }
+        #navegacao-principal{
             position: relative;
             font-family: monospace;
             float: left;
-            width: 100%;
-        }
-        ul{
-           list-style: none;
-           padding-left:0; 
-        }
-        li{
-            background-color: rgb(35, 198, 219);
             display: block;
+            width: 100%;
+            margin-left: 0px;
+        }
+        #menu-principal{
+            list-style: none;
+            padding: 0;
+            margin-left: 0px;
+        }
+        #menu-principal li{
+            background-color: rgb(253, 253, 253);
             float: left;
             padding: 1rem;
             position: relative;
-            text-decoration: none;
             transition-duration: 0.5s;
         }
-        li a{
-            color: rgb(255, 255, 255);
+        #menu-principal li a{
+            color: rgb(96, 174, 226);
             text-decoration: none;
         }
-        li ul{
-            background-color: rgb(35, 198, 219);
+        .dropdown{
+            text-decoration: none;
+            list-style: none;
             visibility: hidden;
-            opacity: 0;
+            opacity: 1;
             min-width: 5rem;
             position: absolute;
             transition: all 0.5s ease;
             margin-top: 1rem;
             left: 0;
             display: none;
-            box-shadow: 0px 8px 16px 0px rgb(27, 50, 250);
+            box-shadow: 0px 8px 16px 0px rgba(red, green, blue, alpha);
         }
-        li ul li{
+        .dropdown li{
             clear: both;
             width: 100%;
+            text-decoration: none;
         }
-        ul li:hover,ul li:focus-within{
-            background-color: rgb(103, 103, 168);
+        .dropdown li a {
+            text-decoration: none;
+            text-align: right;
+        }
+        #menu-principal li:hover,#menu-principal li:focus-within{
+            background-color: bisque;
             cursor: pointer;
             font-weight: bold;
             transition: 0.3s;
         }
-        a:hover{
-            color: blueviolet;
+        #menu-principal li a:hover{
+            color: rgb(25, 90, 143);
         }
-        ul li:hover>ul,
-        ul li:focus-within>ul,
-        ul li ul:hover,
-        ul li ul:focus{
+        #menu-principal li:hover>ul,
+        #menu-principal li:focus-within>ul,
+        .dropdown ul:hover,
+        .dropdown ul:focus{
             visibility: visible;
             opacity: 1;
             display: block;
+            background-color: #ccc;
         }
     </style>
 </head>
@@ -81,21 +97,21 @@
     <article>
     <h1>Pagina inicial.</h1>
     </article>
-    <nav>
-        <ul>
+    <nav id="navegacao-principal">
+        <ul id="menu-principal">
             <li><a href="curriculo.png">Curriculo</a></li>
             <li><a href="#">Sobre mim</a>
-                <ul>
-                    <a href="pagina_eu.html">Meus Projetos e Hobbies</a>
-                    <a href="https://pt-br.facebook.com/">Facebook</a>
-                    <a href="https://www.instagram.com/">Instagram</a>
+                <ul class="dropdown">
+                    <li><a href="pagina_eu.html">Meus Projetos e Hobbies</a></li>
+                    <li><a href="https://pt-br.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
                 </ul></li>
 
                 <li><a href="#">Estou estudando</a>
-                    <ul>
-                        <a href="POO.html">POO</a>
-                        <a href="PBW.html">PBW</a>
-                        <a href="ICO.html">ICO</a>
+                    <ul class="dropdown">
+                        <li><a href="POO.html">POO</a></li>
+                        <li><a href="PBW.html">PBW</a></li>
+                        <li><a href="ICO.html">ICO</a></li>
                     </ul></li>
                 
             <li><a href="contato.html">Entre em Contato</a></li>
